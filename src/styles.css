@@ -1,1 +1,138 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    padding: 30px;
+}
+
+.menu {
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.menu-siap-makan {
+    padding: 0px 15px;
+    float: left;
+    border: 1px solid lightgrey;
+    border-radius: 1%;
+    margin: 0px 10px 20px 10px;
+}
+
+.checkbox {
+    font-size: 15px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 120%;
+}
+
+.data {
+    width: 450px;
+    float: left;
+    margin-right: 30px;
+}
+
+.data-pelanggan {
+    padding: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 1%;
+}
+
+.formulir {
+    width: 600px;
+}
+
+#yesno {
+    float: right;
+    margin-left: 20px;
+}
+
+#judul {
+    float: left;
+    margin-right: 250px;
+    margin-left: 10px;
+}
+
+#namaPemesan {
+    width: 400px;
+}
+
+#alamatPemesan {
+    width: 530px;
+}
+
+#rtPemesan, #rwPemesan {
+    width: 50px;
+}
+
+#tlpPemesan {
+    width: 150px;
+}
+
+.kananDikit {
+    margin-right: 10px;
+}
+
+.keranjang {
+    width: 500px;
+}
+
+.container {
+    width: 1057px;
+}
+
+.banner {
+    margin-bottom: 30px;
+}
+
+.htitle {
+    font-weight: bold;
+    color: green;
+}
+
+.line {
+    border-bottom: 1px dotted lightgrey;
+    position: relative;
+    top: -.5em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+#footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 0 ;
+    margin: 0 auto;
+    background-color: white;
+    color: grey;
+    border-top: 1px solid lightgray;
+}
+
+.topup {
+    position: absolute;
+    margin: -67px 0;
+}
+
+.topup img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-siap-detil {
+    padding: 0px 15px;
+    float: left;
+    margin: 0px 10px 20px 10px;
+}
+
+.datil {
+    float: left;
+    margin-left: 250px;
+    margin-top:100px;
+}
+
+a > h3 {
+    color: green;
+}

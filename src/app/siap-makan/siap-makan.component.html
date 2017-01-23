@@ -1,0 +1,40 @@
+<div class="topup">
+  <img src="../img/logo.png" alt="">
+</div>
+<button class="btn btn-default pull-right" (click)="redirectCart()">
+  <span class="glyphicon glyphicon-shopping-cart"></span>
+  <span class="badge">{{listPesanan.length}}</span>
+</button>
+<br><br>
+
+<div class="banner">
+  <img src="../img/banner/Cover_Depan.png">
+</div>
+
+<h3 class="htitle">MENU SIAP MAKAN</h3>
+<div class="line"></div>
+<div class="clearfix"></div>
+
+<div class="row">
+  <div class="menu-siap-makan" *ngFor="let record of recordSiapMakan">
+    <div class="menu">
+      <a (click)="masukDetil(record)"><h3><strong>{{ record.nama_makanan }}</strong></h3></a>
+      <p>{{ record.deskripsi }}</p>
+      <a><img class="img-rounded" src="{{record.gambar}}"></a>
+      <div class="clearfix"></div>
+      <br/>
+      Harga : <span class="badge">IDR. {{ record.harga }}</span>
+      <button class="btn btn-success pull-right" (click)="masukKeranjang(record)">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  Alakadar Food | 2016-2017 | Ifan Dhani Prasojo | Prasetyo Trimukti Setiko | Rahman Faruq Rajabiyansyahr
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>

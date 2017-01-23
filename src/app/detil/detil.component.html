@@ -1,0 +1,27 @@
+<a (click)="redirectHome()">
+  << Kembali ke pilihan menu
+</a>
+<br><br>
+<div class="detil"*ngFor="let record of listDetil">
+  <div class="menu-siap-detil">
+    <div class="menu">
+      <a (click)="masukDetil(record)"><h3><strong>{{ record.nama_makanan }}</strong></h3></a>
+      <p><strong>Deskripsi : </strong>{{ record.deskripsi }}</p>
+      <a><img class="img-rounded" src="{{record.gambar}}" height="350"></a>
+      <br/>
+    </div>
+  </div>
+  <div class="datil">
+      <strong>Harga : </strong><span class="badge">IDR. {{ record.harga }}</span>
+      <br><strong>Rating : </strong>{{record.rating}}
+      <br><strong>Kandungan Energi : </strong>{{record.energi}} kkal
+      <br><strong>Kandungan Lemak : </strong>{{record.lemak}} gr
+      <br><strong>Kandungan Protein : </strong>{{record.protein}} gr
+      <br><br>
+      <button class="btn btn-success pull-right" (click)="masukKeranjang(record)">Add to Cart</button>
+  </div>
+</div>
+
+<div id="footer">
+  Alakadar Food | 2016-2017 | Ifan Dhani Prasojo | Prasetyo Trimukti Setiko | Rahman Faruq Rajabiyansyahr
+</div>

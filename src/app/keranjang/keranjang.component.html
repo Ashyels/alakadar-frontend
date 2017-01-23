@@ -1,0 +1,24 @@
+<a (click)="redirectHome()">
+  << Kembali ke pilihan menu
+</a>
+<br><br>
+<div class="keranjang" *ngIf="listPesanan.length > 0">
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let record of listPesanan">
+        <span class="badge">IDR. {{record.harga}}</span>
+        <button class="btn btn-danger" (click)="removeFromKeranjang(record)">x</button>&nbsp;
+        {{record.nama_makanan}}
+      </li>
+    </ul>
+  </div>
+  <p class="pull-right">Total yang harus dibayarkan : IDR. <strong>{{total}},-</strong></p><br><br>
+  <button class="btn btn-success pull-right" (click)="redirect()">Ke Proses Pemesanan</button>
+</div>
+<div class="alert alert-danger" *ngIf="listPesanan.length === 0">
+  Tidak ada menu makanan dalam keranjang
+</div>
+
+<div id="footer">
+  Alakadar Food | 2016-2017 | Ifan Dhani Prasojo | Prasetyo Trimukti Setiko | Rahman Faruq Rajabiyansyahr
+</div>

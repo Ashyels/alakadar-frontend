@@ -1,0 +1,37 @@
+<div class="konfirmasi">
+  <h3 class="htitle">KONFIRMASI PEMESANAN</h3>
+  <br>
+  <div class="data">
+    <h4>List Keranjang</h4>
+    <div class="data-pelanggan">
+      <p id="judul"><strong>Nama Menu</strong></p>
+      <p><strong>Harga</strong></p>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let record of listPesanan">
+          {{record.nama_makanan}}
+          <span class="badge">IDR. {{record.harga}}</span>
+        </li>
+      </ul>
+      <p class="pull-right">Total yang harus dibayarkan : IDR. <strong>{{total}},-</strong></p><br>
+    </div>
+    
+  </div>
+  <div class="data">
+    <h4>Data Pelanggan</h4>
+    <div class="data-pelanggan">
+      <p><strong>Nama Penerima : </strong><br>{{nama}}</p>
+      <p><strong>Alamat : </strong><br>{{alamat}} RT.{{rt}}/{{rw}} Kelurahan {{kelurahan}} Kecamatan {{kecamatan}} {{pos}} {{kota}}</p>
+      <p><strong>No. Telepon : </strong><br>{{telepon}}</p>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" #cbcbcb (click)="0">Dengan men-checklist persetujuan ini saya menyatakan bahwa list keranjang adalah list yang saya pesan dan data pelanggan yang telah saya isi adalah data yang valid, dan benar adanya</label>
+    </div>
+    <br>
+    <button class="btn btn-success" id="yesno" [disabled]="cbcbcb.checked === false" (click)="redirectToFinish()">Konfirmasi Pemesanan</button>
+    <button class="btn btn-danger" id="yesno" (click)="redirectToHome()">Batalkan Pemesanan</button>
+  </div>
+</div>
+
+<div id="footer">
+  Alakadar Food | 2016-2017 | Ifan Dhani Prasojo | Prasetyo Trimukti Setiko | Rahman Faruq Rajabiyansyahr
+</div>
